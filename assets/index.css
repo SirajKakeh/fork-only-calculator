@@ -16,6 +16,8 @@ body {
 .screen {
   border-bottom: solid 1px gray;
   padding: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .buttons {
@@ -50,6 +52,7 @@ body {
 
 .calc-button {
   width: 100%;
+  min-width: 30px;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
@@ -59,11 +62,22 @@ body {
 .col-grow ul li button {
   height: calc(100px / 3);
 }
+
 .controls {
   display: flex;
 }
+
 .control {
   flex-grow: 1;
   border: solid 1px #b9b9b9;
   text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.control:active,
+.calc-button:active,
+#reset-button:active,
+.number-button:active {
+  background-color: #b9b9b9
 }
